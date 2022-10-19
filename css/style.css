@@ -102,3 +102,10 @@ section {
     text-shadow: #000000 0px 0px 10px;
     padding-top: 80vh;
 }
+
+.section-inner button {
+    font-family: lycans;
+    font-size: 75%;
+    padding: 10px 0 10px 0;
+    width: 20vw;
+}
