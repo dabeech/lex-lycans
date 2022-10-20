@@ -31,7 +31,7 @@ ul {
 
 /* header and nav */
 .main-header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 3;
     display: flex;
@@ -94,6 +94,12 @@ section {
 /* banner */
 .main-banner {
     background-image: url(../imgs/home-banner.webp);
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .section-inner {
@@ -103,9 +109,29 @@ section {
     padding-top: 80vh;
 }
 
-.section-inner button {
+.section-inner h2 {
+    margin-bottom: 10px;
+}
+
+.section-inner .button {
     font-family: lycans;
     font-size: 75%;
-    padding: 10px 0 10px 0;
+    text-shadow: none;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 15px 50px;
     width: 20vw;
+    transition: background 0.5s;
+}
+
+.section-inner .button:hover {
+    cursor: pointer;
+    background: rgb(182, 181, 181);
+}
+
+/* karate section */
+.karate-section {
+    background-image: url(../imgs/karate-img.png);
 }

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'lycans';
+    src: url('../fonts/la-oriental.regular-webfont.woff2') format('woff2'),
+         url('../fonts/la-oriental.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* resets */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lycans;
+    background: #2f3338;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
