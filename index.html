@@ -9,7 +9,15 @@
     <meta name="description" content="Lexington Lycans is an armored combat group based in the heart of the Bluegrass. Come join us for practice! Remember, Buhurt is love.">
 
     <!-- linked files -->
-    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- media queries to select stylesheets -->
+        <!-- desktop -->
+        <link rel="stylesheet" href="css/desktop-style.css">
+        <!-- tablet -->
+        <link rel="stylesheet" media="(max-width:1024px) and (min-width:451px)" href="css/tablet-style.css">
+        <!-- smartphone -->
+        <link rel="stylesheet" media="(max-width:450px)" href="css/phone-style.css">
+
     <script src="js/script.js" defer></script>
 
     <link rel="shortcut icon" href="/imgs/favicon.png">
@@ -38,10 +46,20 @@
     <!-- main banner -->
     <section class="main-banner">
         <div class="section-inner">
-            <h2>Choose Your Path</h2>
-            <button>Karate</button>
-            <button>Buhurt</button>
+            <h2>Choose A Path</h2>
+            <a class="button" href="#karate">Karate</a>
+            <a class="button" href="#buhurt">Buhurt</a>
         </div>
+    </section>
+
+    <!-- karate section -->
+    <section class="karate-section" id="karate">
+
+    </section>
+
+    <!-- buhurt section -->
+    <section class="buhurt-section" id="buhurt">
+
     </section>
 </body>
 </html>
