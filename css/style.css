@@ -1,0 +1,525 @@
+@font-face {
+    font-family: 'lycans';
+    src: url('../fonts/la-oriental.regular-webfont.woff2') format('woff2'),
+         url('../fonts/la-oriental.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-regular';
+    src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-light-italic';
+    src: url('../fonts/OpenSans-LightItalic-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* resets */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+======================
+body bg for whole site
+======================
+*/
+
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+/* 
+======================
+header, nav, and logo
+======================
+*/
+
+header {
+    /* positioning */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    /* styling */
+    background: #000;
+    font-family: 'lycans';
+}
+
+header .logo img {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+header .logo .header-name {
+    display: inline;
+    font-size: medium;
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 10;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bottom {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: all 0.5s;
+}
+
+.hamburger-mid { transform: translateY(5px); }
+
+.hamburger-bottom { transform: translateY(10px); }
+
+.open { transform: rotate(90deg); }
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-mid { display: none; }
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.navigation {
+    background: #000;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    font-family: 'lycans';
+    text-align: right;
+    padding-right: 15px;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1;
+}
+
+.show { transform: translateX(0); }
+
+.menu-list ul li { padding: 10px; }
+
+.menu-list ul li:hover { background: rgb(71, 71, 71); }
+
+/* 
+=====================
+Hero Section
+=====================
+*/
+
+.hero-img img {
+    width: 100%;
+    padding-top: 50px;
+}
+
+/* 
+=====================
+Choose Your Path
+=====================
+*/
+
+.choose {
+    text-align: center;
+    font-family: Lycans;
+    font-size: xxx-large;
+}
+
+#choose {
+    margin-left: 250px;
+    margin-right: 250px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 1rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    /* background-color: aqua; */
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.karate-card {
+    background-image: url(/imgs/karate-3x3.webp);
+}
+
+.buhurt-card {
+    background-image: url(/imgs/buhurt-3x3.webp);
+}
+
+.card-content {
+    height: 100%;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / .3) 10%,
+        hsl(0 0% 0% / 1)
+    );
+    padding: 15px;
+    font-family: open-regular;
+    position: relative;
+}
+
+.card-title {
+    font-family: Lycans;
+    font-size: xxx-large;
+    text-shadow: #000 1px 0 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card-content .button {
+    background: whitesmoke;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    margin-top: 15px;
+    border-radius: .25em;
+}
+
+/* 
+=====================
+Main Text Section (Home)
+=====================
+*/
+
+#home-main {
+    font-family: open-regular;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+/* 
+=====================
+Karate and Buhurt Blurbs
+=====================
+*/
+#karate {
+    display: flex;
+    position: relative;
+    padding: 50px;
+    background-image: url(/imgs/karate-img.png);
+    background-repeat: no-repeat;
+    height: 670px;
+}
+
+#buhurt {
+    display: flex;
+    position: relative;
+    padding: 50px;
+    background-image: url(/imgs/buhurt-img.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 670px;
+}
+
+.karate-text-screen {
+    text-align: right;
+    font-family: open-regular;
+    margin-left: 175px;
+    padding-right: 50px;
+}
+
+.buhurt-text-screen {
+    font-family: open-regular;
+    margin-right: 175px;
+    padding-left: 50px;
+}
+
+.karate-text-mobile,
+.buhurt-text-mobile {
+    font-family: open-regular;
+    display: none;
+    padding: 50px;
+    margin-top: -25px;
+}
+
+.karate-text-screen h3,
+.karate-text-mobile h3,
+.buhurt-text-screen h3,
+.buhurt-text-mobile h3 {
+    font-family: lycans;
+    margin-bottom: 7px;
+}
+
+#karate .button,
+#karate-mobile .button {
+    background: whitesmoke;
+    color: black;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: .25em;
+    width: fit-content;
+    float: right;
+    text-align: center;
+    margin-left: 15px;
+}
+
+#buhurt .button,
+#buhurt-mobile .button {
+    background: whitesmoke;
+    color: black;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: .25em;
+    width: fit-content;
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+}
+
+/* 
+=====================
+Schedule Page
+=====================
+*/
+
+#schedule iframe {
+    height: 70vh;
+    width: 99vw;
+    margin-top: 50px;
+}
+
+/* 
+=====================
+Membership Page
+=====================
+*/
+
+#membership-info {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 50px;
+    font-family: open-regular;
+}
+
+#membership-info h1 {
+    font-family: lycans;
+}
+
+#membership-info img {
+    max-width: 100%;
+    margin-top: 75px;
+}
+
+#membership-info .button {
+    background: whitesmoke;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    margin-top: 15px;
+    border-radius: .25em;
+}
+
+.membership-blurb {
+    width: 50%;
+    padding: 15px;
+}
+
+/* 
+=====================
+Form Page
+=====================
+*/
+
+#membership-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    font-family: open-regular;
+}
+
+#membership-form h1 {
+    font-family: lycans;
+    margin-top: 25px;
+}
+
+#membership-form input[type=submit] {
+    font-family: open-regular;
+    font-size: large;
+    padding: 7px;
+}
+
+/* 
+=====================
+Footer
+=====================
+*/
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    font-family: open-regular;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    margin: auto;
+}
+
+.footer-icon {
+    margin: 25px;
+}
+
+.web-by {
+    font-family: open-light-italic;
+    font-size: small;
+    margin-top: 7px;
+}
+
+/* 
+=====================
+Media Queries
+=====================
+*/
+
+@media (max-width: 415px) {
+    #choose {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    #home-main {
+        padding: 50px;
+    }    
+    .karate-text-mobile,
+    .buhurt-text-mobile {
+        display: inline-block;
+    }
+    .karate-text-screen,
+    .buhurt-text-screen {
+        display: none;
+    }
+    #karate-mobile .button {
+        float: left;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    #schedule iframe {
+        margin-left: 0.5vw;
+    }
+    .membership-blurb {
+        width: 100%;
+        padding: 15px;
+    }
+    footer {
+        padding: 15px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    header .logo .header-name {
+        display: inline;
+        font-size: large;
+    }
+    .choose {
+        font-size: 112pt;
+    }
+    #choose {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: .5rem;
+        margin: 1rem 5vw;
+    }
+    .card {
+        width: 500px;
+        height: 500px;
+    }
+    .karate-card {
+        background-image: url(/imgs/karate-5x5.webp);
+    }
+    .buhurt-card {
+        background-image: url(/imgs/buhurt-5x5.webp);
+    }
+    .card-content {
+        font-size: x-large;
+    }
+    .card-content p {
+        margin-top: 50px;
+    }
+}
+
+
+@media (min-width: 1445px) {
+    header .logo .header-name {
+        display: inline;
+        font-size: x-large;
+    }
+    #choose {
+        grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+        gap: .25rem;
+        margin: 1rem 1vw;
+    }
+    .card {
+        width: 750px;
+        height: 750px;
+    }
+    .karate-card {
+        background-image: url(/imgs/karate-75x75.webp);
+    }
+    .buhurt-card {
+        background-image: url(/imgs/buhurt-75x75.webp);
+    }
+    .card-title {
+        font-size: 50pt;
+    }
+}
+
+@media (hover) {
+    .card {
+        transition: transform 500ms ease;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-content {
+        transform: translateY(79%);
+        transition: transform 500ms ease;
+    }
+    .card-content:hover {
+        transform: translateY(0);
+    }
+}
