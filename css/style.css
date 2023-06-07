@@ -340,6 +340,7 @@ Membership Page
 #membership-info img {
     max-width: 100%;
     margin-top: 75px;
+    float: left;
 }
 
 #membership-info .button {
@@ -354,6 +355,10 @@ Membership Page
 .membership-blurb {
     width: 50%;
     padding: 15px;
+}
+
+.half-screen {
+    width: 50%;
 }
 
 /* 
@@ -442,6 +447,9 @@ Media Queries
     .membership-blurb {
         width: 100%;
         padding: 15px;
+    }
+    .half-screen {
+        width: 100%;
     }
     footer {
         padding: 15px;
