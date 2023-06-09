@@ -373,6 +373,7 @@ Form Page
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
+    justify-content: center;
     font-family: open-regular;
 }
 
