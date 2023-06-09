@@ -333,6 +333,7 @@ Membership Page
     flex-wrap: wrap;
     padding: 50px;
     font-family: open-regular;
+    justify-content: center;
 }
 
 #membership-info h1 {
