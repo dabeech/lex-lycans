@@ -387,6 +387,27 @@ Form Page
     padding: 7px;
 }
 
+/*
+=====================
+Meet the Fighters
+=====================
+*/
+
+#fighter-info {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: open-regular;
+    margin: 25px 150px 50px 150px;
+}
+
+.fighter img {
+    max-width: 100%;
+}
+
+.fighter li {
+    padding-top: 25px;
+}
+
 /* 
 =====================
 Footer
@@ -441,7 +462,6 @@ Media Queries
     #karate,
     #buhurt {
         margin: 25px 50px 0px 50px;
-
     }
     #karate-mobile .button {
         float: left;
@@ -457,6 +477,12 @@ Media Queries
     }
     .half-screen {
         width: 100%;
+    }
+    #fighter-info {
+        margin: 25px 0px 0px 0px;
+    }
+    .fighter-text {
+        padding: 50px;
     }
     footer {
         padding: 15px;
