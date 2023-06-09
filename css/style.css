@@ -225,7 +225,7 @@ Main Text Section (Home)
     text-align: justify;
     display: flex;
     flex-wrap: wrap;
-    padding: 100px;
+    padding: 150px;
 }
 
 /* 
@@ -236,7 +236,8 @@ Karate and Buhurt Blurbs
 #karate {
     display: flex;
     position: relative;
-    padding: 50px;
+    /*padding: 50px;*/
+    margin: 25px 150px 0px 150px;
     background-image: url(/imgs/karate-img.png);
     background-repeat: no-repeat;
     height: 670px;
@@ -245,7 +246,8 @@ Karate and Buhurt Blurbs
 #buhurt {
     display: flex;
     position: relative;
-    padding: 50px;
+    /*padding: 50px;*/
+    margin: 25px 150px 0px 150px;
     background-image: url(/imgs/buhurt-img.png);
     background-position: right;
     background-repeat: no-repeat;
@@ -256,13 +258,13 @@ Karate and Buhurt Blurbs
     text-align: right;
     font-family: open-regular;
     margin-left: 175px;
-    padding-right: 50px;
+    /* padding-right: 50px; */
 }
 
 .buhurt-text-screen {
     font-family: open-regular;
     margin-right: 175px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 
 .karate-text-mobile,
@@ -435,6 +437,11 @@ Media Queries
     .karate-text-screen,
     .buhurt-text-screen {
         display: none;
+    }
+    #karate,
+    #buhurt {
+        margin: 25px 50px 0px 50px;
+
     }
     #karate-mobile .button {
         float: left;
