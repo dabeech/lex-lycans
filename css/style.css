@@ -20,6 +20,13 @@
     font-style: italic;
 }
 
+.bokor-regular {
+  font-family: "Bokor", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* resets */
 *, *::before, *::after {
     margin: 0;
@@ -61,20 +68,15 @@ header {
     z-index: 3;
     /* styling */
     background: #000;
-    font-family: 'lycans';
+    font-family: 'Bokor';
 }
 
 header .logo img {
     display: inline-flex;
-    vertical-align: middle;
+    vertical-align: text-bottom;
     width: 50px;
     height: auto;
     margin-left: 10px;
-}
-
-header .logo .header-name {
-    display: inline;
-    font-size: medium;
 }
 
 .hamburger {
@@ -122,7 +124,8 @@ header .logo .header-name {
     position: fixed;
     top: 50px;
     width: 100%;
-    font-family: 'lycans';
+    font-family: 'Bokor';
+    font-size: large;
     text-align: right;
     padding-right: 15px;
     transform: translateY(-100%);
@@ -149,155 +152,57 @@ Hero Section
 
 /* 
 =====================
-Choose Your Path
-=====================
-*/
-
-.choose {
-    text-align: center;
-    font-family: Lycans;
-    font-size: xxx-large;
-}
-
-#choose {
-    margin-left: 250px;
-    margin-right: 250px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 1rem;
-    padding: 0;
-    list-style-type: none;
-}
-
-.card {
-    /* background-color: aqua; */
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
-
-.karate-card {
-    background-image: url(/imgs/karate-3x3.webp);
-}
-
-.buhurt-card {
-    background-image: url(/imgs/buhurt-3x3.webp);
-}
-
-.card-content {
-    height: 100%;
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / .3) 10%,
-        hsl(0 0% 0% / 1)
-    );
-    padding: 15px;
-    font-family: open-regular;
-    position: relative;
-}
-
-.card-title {
-    font-family: Lycans;
-    font-size: xxx-large;
-    text-shadow: #000 1px 0 10px;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.card-content .button {
-    background: whitesmoke;
-    color: black;
-    padding: 5px;
-    position: absolute;
-    margin-top: 15px;
-    border-radius: .25em;
-}
-
-/* 
-=====================
 Main Text Section (Home)
 =====================
 */
 
 #home-main {
     font-family: open-regular;
-    text-align: justify;
+    text-align: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 150px;
+    padding: 100px;
+}
+
+#home-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
 }
 
 /* 
 =====================
-Karate and Buhurt Blurbs
+Text for Screen and Mobile
 =====================
 */
-#karate {
-    display: flex;
-    position: relative;
-    /*padding: 50px;*/
-    margin: 25px 150px 0px 150px;
-    background-image: url(/imgs/karate-img.png);
-    background-repeat: no-repeat;
-    height: 670px;
-}
 
-#buhurt {
-    display: flex;
-    position: relative;
-    /*padding: 50px;*/
-    margin: 25px 150px 0px 150px;
-    background-image: url(/imgs/buhurt-img.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 670px;
-}
-
-.karate-text-screen {
-    text-align: right;
-    font-family: open-regular;
-    margin-left: 175px;
-    /* padding-right: 50px; */
-}
-
-.buhurt-text-screen {
+text-screen {
     font-family: open-regular;
     margin-right: 175px;
-    /* padding-left: 50px; */
+    padding-left: 50px;
 }
 
-.karate-text-mobile,
-.buhurt-text-mobile {
+text-mobile {
     font-family: open-regular;
     display: none;
     padding: 50px;
     margin-top: -25px;
 }
 
-.karate-text-screen h3,
-.karate-text-mobile h3,
-.buhurt-text-screen h3,
-.buhurt-text-mobile h3 {
-    font-family: lycans;
+text-screen h3,
+text-mobile h3 {
+    font-family: "Bokor";
     margin-bottom: 7px;
 }
 
-#karate .button,
-#karate-mobile .button {
-    background: whitesmoke;
-    color: black;
-    padding: 5px;
-    margin-top: 15px;
-    border-radius: .25em;
-    width: fit-content;
-    float: right;
-    text-align: center;
-    margin-left: 15px;
-}
+/* 
+=====================
+Buttons
+=====================
+*/
 
-#buhurt .button,
-#buhurt-mobile .button {
+.button {
+    font-family: "Bokor";
+    font-size: x-large;
     background: whitesmoke;
     color: black;
     padding: 5px;
@@ -311,6 +216,101 @@ Karate and Buhurt Blurbs
 
 /* 
 =====================
+Buhurt Page
+=====================
+*/
+
+#buhurt-main {
+    font-family: open-regular;
+    text-align: left;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+#buhurt-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
+}
+
+/* 
+=====================
+Book Page
+=====================
+*/
+
+#book-main {
+    font-family: open-regular;
+    text-align: left;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+#book-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
+}
+
+/* 
+=====================
+Join Page
+=====================
+*/
+
+#join-main {
+    font-family: open-regular;
+    text-align: left;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+#join-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
+}
+
+/* 
+=====================
+Meet Page
+=====================
+*/
+
+#meet-main {
+    font-family: open-regular;
+    text-align: left;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+#meet-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
+}
+
+/* 
+=====================
+Partner Page
+=====================
+*/
+
+#partner-main {
+    font-family: open-regular;
+    text-align: left;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+#partner-main h2 {
+    font-family: "Bokor";
+    font-size: xx-large;
+}
+
+/* 
+=====================
 Schedule Page
 =====================
 */
@@ -319,99 +319,6 @@ Schedule Page
     height: 70vh;
     width: 99vw;
     margin-top: 50px;
-}
-
-/* 
-=====================
-Membership Page
-=====================
-*/
-
-#membership-info {
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    padding: 50px;
-    font-family: open-regular;
-    justify-content: center;
-}
-
-#membership-info h1 {
-    font-family: lycans;
-}
-
-#membership-info img {
-    max-width: 100%;
-    margin-top: 75px;
-    float: left;
-}
-
-#membership-info .button {
-    background: whitesmoke;
-    color: black;
-    padding: 5px;
-    position: absolute;
-    margin-top: 15px;
-    border-radius: .25em;
-}
-
-.membership-blurb {
-    width: 50%;
-    padding: 15px;
-}
-
-.half-screen {
-    width: 50%;
-}
-
-/* 
-=====================
-Form Page
-=====================
-*/
-
-#membership-form {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px;
-    justify-content: center;
-    font-family: open-regular;
-}
-
-#membership-form h1 {
-    font-family: lycans;
-    margin-top: 25px;
-}
-
-#membership-form input[type=submit] {
-    font-family: open-regular;
-    font-size: large;
-    padding: 7px;
-}
-
-/*
-=====================
-Meet the Fighters
-=====================
-*/
-
-#fighter-info {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: open-regular;
-    margin: 25px 150px 50px 150px;
-}
-
-.fighter img {
-    max-width: 100%;
-}
-
-.fighter li {
-    padding-top: 25px;
-}
-
-.fighter-text {
-    text-align: center;
 }
 
 /* 
@@ -450,29 +357,32 @@ Media Queries
 */
 
 @media (max-width: 415px) {
+    .header-name {
+        font-size: x-large;
+        display:inline-flex;
+    }
     #choose {
         margin-left: 25px;
         margin-right: 25px;
     }
     #home-main {
         padding: 50px;
-    }    
-    .karate-text-mobile,
-    .buhurt-text-mobile {
+    }
+    #buhurt-main,
+    #book-main,
+    #join-main,
+    #meet-main,
+    #partner-main {
+        padding: 35px;
+    }
+    .text-mobile {
         display: inline-block;
     }
-    .karate-text-screen,
-    .buhurt-text-screen {
+    .text-screen {
         display: none;
     }
-    #karate,
-    #buhurt {
-        margin: 25px 50px 0px 50px;
-    }
-    #karate-mobile .button {
-        float: left;
-        margin-left: 0;
-        margin-right: 15px;
+    #home-main .button {
+        width: 100%;
     }
     #schedule iframe {
         margin-left: 0.5vw;
@@ -480,15 +390,6 @@ Media Queries
     .membership-blurb {
         width: 100%;
         padding: 15px;
-    }
-    .half-screen {
-        width: 100%;
-    }
-    #fighter-info {
-        margin: 25px 0px 0px 0px;
-    }
-    .fighter-text {
-        padding: 50px;
     }
     footer {
         padding: 15px;
@@ -499,31 +400,7 @@ Media Queries
 @media (min-width: 1280px) {
     header .logo .header-name {
         display: inline;
-        font-size: large;
-    }
-    .choose {
-        font-size: 112pt;
-    }
-    #choose {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        gap: .5rem;
-        margin: 1rem 5vw;
-    }
-    .card {
-        width: 500px;
-        height: 500px;
-    }
-    .karate-card {
-        background-image: url(/imgs/karate-5x5.webp);
-    }
-    .buhurt-card {
-        background-image: url(/imgs/buhurt-5x5.webp);
-    }
-    .card-content {
-        font-size: x-large;
-    }
-    .card-content p {
-        margin-top: 50px;
+        font-size: xx-large;
     }
 }
 
@@ -531,42 +408,12 @@ Media Queries
 @media (min-width: 1445px) {
     header .logo .header-name {
         display: inline;
-        font-size: x-large;
-    }
-    #choose {
-        grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
-        gap: .25rem;
-        margin: 1rem 1vw;
-    }
-    .card {
-        width: 750px;
-        height: 750px;
-    }
-    .karate-card {
-        background-image: url(/imgs/karate-75x75.webp);
-    }
-    .buhurt-card {
-        background-image: url(/imgs/buhurt-75x75.webp);
-    }
-    .card-title {
-        font-size: 50pt;
+        font-size: xx-large;
     }
 }
 
 @media (hover) {
-    .card {
-        transition: transform 500ms ease;
-        overflow: hidden;
-    }
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .card-content {
-        transform: translateY(79%);
-        transition: transform 500ms ease;
-    }
-    .card-content:hover {
-        transform: translateY(0);
+    .button:hover {
+        text-decoration: underline;
     }
 }
