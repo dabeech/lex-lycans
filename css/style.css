@@ -318,12 +318,18 @@ Schedule Page
 #class-schedule {
     padding: 100px;
     font-family: open-regular;
+    h2 {
+        font-family: "Bokor"
+    }
+    li {
+        margin: 15px;
+    }
 }
 
-/* #schedule h2 {
+#schedule h2 {
     padding-left: 100px;
     font-family: "Bokor";
-} */
+}
 
 #schedule iframe {
     height: 70vh;
