@@ -320,18 +320,10 @@ Schedule Page
     font-family: open-regular;
 }
 
-#class-schedule h2 {
-        font-family: "Bokor"
-    }
-
-#class-schedule li {
-        margin: 15px;
-    }
-
-#schedule h2 {
+/* #schedule h2 {
     padding-left: 100px;
     font-family: "Bokor";
-}
+} */
 
 #schedule iframe {
     height: 70vh;
